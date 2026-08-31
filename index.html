@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Haekal Mimtazulfaqhi Zaydan — Fullstack Developer, AI Automation Engineer, Smart Contract Engineer, Crypto Trader &amp; Investment Manager.">
+  <title>HMZ — Haekal Mimtazulfaqhi Zaydan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body class="loading">
+
+<div id="cursor" aria-hidden="true">
+  <div id="cursor-outer"></div>
+  <div id="cursor-inner"></div>
+  <div id="cursor-label"></div>
+</div>
+
+<div id="preloader" aria-hidden="true" role="status">
+  <div class="preloader-bg"></div>
+  <div class="preloader-content">
+    <div class="preloader-ascii"><pre>HMZ_</pre></div>
+    <div class="preloader-status">
+      <span id="preloader-text">INITIALIZING PROFILE // HAEKAL.MZF.ZDN</span>
+      <span class="blink-cursor" aria-hidden="true">&#x258B;</span>
+    </div>
+    <div class="preloader-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+      <div class="preloader-bar-wave" id="preloader-progress"></div>
+      <div class="preloader-bar-label"><span id="preloader-percent">0</span>%</div>
+    </div>
+  </div>
+  <div class="preloader-scanline" aria-hidden="true"></div>
+</div>
+
+<nav id="nav" aria-label="Main navigation">
+  <div class="nav-brand">
+    <a href="#hero" class="nav-logo" aria-label="HMZ Home">HMZ<span class="logo-blink" aria-hidden="true">_</span></a>
+  </div>
+  <div class="nav-links" role="list">
+    <a href="#about"      class="nav-link" data-label="01">IDENTITY</a>
+    <a href="#skills"     class="nav-link" data-label="02">SYSTEMS</a>
+    <a href="#experience" class="nav-link" data-label="03">LOG</a>
+    <a href="#projects"   class="nav-link" data-label="04">ASSETS</a>
+    <a href="#contact"    class="nav-link" data-label="05">CONNECT</a>
+  </div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <a href="#about"      class="mobile-link">01 &mdash; IDENTITY</a>
+    <a href="#skills"     class="mobile-link">02 &mdash; SYSTEMS</a>
+    <a href="#experience" class="mobile-link">03 &mdash; MISSION LOG</a>
+    <a href="#projects"   class="mobile-link">04 &mdash; ASSETS</a>
+    <a href="#contact"    class="mobile-link">05 &mdash; CONNECT</a>
+  </div>
+</div>
+
+<main id="main-content">
+
+<section id="hero" class="section section--full">
+  <canvas id="three-canvas" aria-hidden="true"></canvas>
+  <div class="hud-corner hud-corner--tl" aria-hidden="true"></div>
+  <div class="hud-corner hud-corner--tr" aria-hidden="true"><span class="hud-label" id="hero-clock"></span></div>
+  <div class="hud-corner hud-corner--bl" aria-hidden="true"><span class="hud-label">LAT: -6.4025 &middot; LON: 106.7942 &middot; DEPOK, ID</span></div>
+  <div class="hud-corner hud-corner--br" aria-hidden="true"><span class="hud-label">ENC: AES-256 &middot; SIG: &#x2588;&#x2588;&#x2588;&#x2588;&#x2591;&#x2591; 96%</span></div>
+  <div class="hero-content">
+    <div class="hero-photo-wrap" id="hero-photo-wrap">
+      <div class="photo-orbit" aria-hidden="true">
+        <div class="orbit-ring orbit-ring--1"><div class="orbit-dot"></div></div>
+        <div class="orbit-ring orbit-ring--2"><div class="orbit-dot"></div></div>
+      </div>
+      <div class="photo-hexagon-wrap">
+        <div class="photo-border-glow" aria-hidden="true"></div>
+        <div class="photo-hexagon">
+          <img src="assets/foto_profile.jpeg" alt="Haekal Mimtazulfaqhi Zaydan" id="profile-photo" class="photo-img" width="260" height="294">
+          <div class="photo-scan" aria-hidden="true"></div>
+          <div class="photo-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="photo-tags" aria-hidden="true">
+          <span class="photo-tag photo-tag--tl">ID:HMZ</span>
+          <span class="photo-tag photo-tag--br">STATUS:VERIFIED</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-text">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-line" aria-hidden="true"></span>
+        <span class="eyebrow-text">PROFILE ACTIVE // DEPOK, ID</span>
+      </div>
+      <h1 class="hero-name">
+        <span class="name-line" data-splitting data-glitch>HAEKAL</span>
+        <span class="name-line name-line--accent" data-splitting>MIMTAZULFAQHI</span>
+        <span class="name-line" data-splitting data-glitch>ZAYDAN</span>
+      </h1>
+      <div class="hero-role-wrap" aria-live="polite">
+        <span class="role-prefix" aria-hidden="true">//</span>
+        <span id="role-display" class="hero-role-text"></span>
+        <span class="role-blink" aria-hidden="true">_</span>
+      </div>
+      <p class="hero-bio">Informatics Engineering student &amp; multi-domain engineer specializing in <strong>Full-Stack Web Development</strong>, <strong>AI Pipeline Engineering</strong>, <strong>Smart Contracts</strong>, and <strong>Financial Investment Management</strong>.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn--primary" data-magnetic><span class="btn-text">ESTABLISH CONNECTION</span><span class="btn-icon" aria-hidden="true">&#x2192;</span></a>
+        <a href="#projects" class="btn btn--ghost" data-magnetic><span class="btn-text">VIEW ASSETS</span></a>
+      </div>
+      <div class="hero-metrics" aria-label="Stats">
+        <div class="metric"><span class="metric-val">4+</span><span class="metric-label">PROD SYSTEMS</span></div>
+        <div class="metric-sep" aria-hidden="true"></div>
+        <div class="metric"><span class="metric-val">9+</span><span class="metric-label">CERTIFICATIONS</span></div>
+        <div class="metric-sep" aria-hidden="true"></div>
+        <div class="metric"><span class="metric-val">24/7</span><span class="metric-label">AI PIPELINE</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span class="scroll-label">SCROLL</span>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num" aria-hidden="true">01</div>
+      <div class="section-title-wrap">
+        <span class="section-tag">// CLASSIFIED DOSSIER</span>
+        <h2 class="section-title" data-splitting>IDENTITY</h2>
+      </div>
+      <div class="section-line" aria-hidden="true"></div>
+    </div>
+    <div class="about-grid">
+      <div class="terminal-window" id="about-terminal">
+        <div class="terminal-header">
+          <div class="terminal-dots" aria-hidden="true">
+            <span class="tdot tdot--red"></span>
+            <span class="tdot tdot--amber"></span>
+            <span class="tdot tdot--green"></span>
+          </div>
+          <span class="terminal-title">PROFILE.SYS &mdash; READ ONLY</span>
+        </div>
+        <div class="terminal-body">
+          <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd"> cat profile.json</span></div>
+          <div id="about-output" aria-live="polite"></div>
+        </div>
+      </div>
+      <div class="about-stats-grid">
+        <div class="stat-card" data-delay="0">
+          <span class="stat-val" data-count="4">0</span><span class="stat-unit">+</span>
+          <div class="stat-label">PROD CLIENT PROJECTS</div>
+          <div class="stat-bar"><div class="stat-bar-fill" style="--fill:88%"></div></div>
+        </div>
+        <div class="stat-card" data-delay="100">
+          <span class="stat-val" data-count="9">0</span><span class="stat-unit">+</span>
+          <div class="stat-label">VERIFIED CERTIFICATIONS</div>
+          <div class="stat-bar"><div class="stat-bar-fill" style="--fill:95%"></div></div>
+        </div>
+        <div class="stat-card" data-delay="200">
+          <span class="stat-val" data-count="100">0</span><span class="stat-unit">%</span>
+          <div class="stat-label">AI QA CODE AUDIT</div>
+          <div class="stat-bar"><div class="stat-bar-fill" style="--fill:100%"></div></div>
+        </div>
+        <div class="stat-card" data-delay="300">
+          <span class="stat-val" data-count="24">0</span><span class="stat-unit">/7</span>
+          <div class="stat-label">AUTOMATED PIPELINES</div>
+          <div class="stat-bar"><div class="stat-bar-fill" style="--fill:99%"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="about-bio-wrap">
+      <div class="about-bio-text">
+        <p>Informatics Engineering student and multi-domain practitioner with hands-on experience spanning <strong>Full-Stack Web Development</strong>, <strong>AI Pipeline Engineering</strong>, <strong>Financial Investment Management</strong>, and <strong>AI Quality Assurance</strong>.</p>
+        <p>Proven ability to independently design and deploy production systems, audit AI-generated outputs for quality and logical accuracy, manage cross-functional responsibilities, and deliver scalable engineering solutions &mdash; from decentralized Ethereum smart contracts to 24/7 automated vision scrapers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num" aria-hidden="true">02</div>
+      <div class="section-title-wrap">
+        <span class="section-tag">// CORE SYSTEMS</span>
+        <h2 class="section-title" data-splitting>CAPABILITIES</h2>
+      </div>
+      <div class="section-line" aria-hidden="true"></div>
+    </div>
+    <div class="skills-network-wrap">
+      <canvas id="skills-canvas" aria-label="Interactive skill network"></canvas>
+      <div class="skills-legend" aria-hidden="true">
+        <div class="legend-item"><span class="legend-dot" style="--c:#00FF88"></span>FRONTEND</div>
+        <div class="legend-item"><span class="legend-dot" style="--c:#00AAFF"></span>BACKEND</div>
+        <div class="legend-item"><span class="legend-dot" style="--c:#C8FF00"></span>AI / ML</div>
+        <div class="legend-item"><span class="legend-dot" style="--c:#FF8A00"></span>BLOCKCHAIN</div>
+        <div class="legend-item"><span class="legend-dot" style="--c:#FF3A20"></span>FINANCE</div>
+      </div>
+    </div>
+    <div class="skills-tooltip" id="skills-tooltip" aria-hidden="true">
+      <div class="tooltip-name"></div>
+      <div class="tooltip-level"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3 class="skill-cat-title"><span class="cat-bracket">[</span>FRAMEWORKS &amp; LIBS<span class="cat-bracket">]</span></h3>
+        <div class="skill-items">
+          <span class="skill-item">Node.js</span><span class="skill-item">Express.js</span>
+          <span class="skill-item">Ethers.js (v5/v6)</span><span class="skill-item">React</span>
+          <span class="skill-item">Laravel</span><span class="skill-item">FastAPI</span>
+          <span class="skill-item">Flask</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3 class="skill-cat-title"><span class="cat-bracket">[</span>LANGUAGES<span class="cat-bracket">]</span></h3>
+        <div class="skill-items">
+          <span class="skill-item">JavaScript (ES6+)</span><span class="skill-item">Python</span>
+          <span class="skill-item">Solidity</span><span class="skill-item">PHP</span>
+          <span class="skill-item">HTML5 / CSS3</span><span class="skill-item">SQL</span>
+          <span class="skill-item">Tailwind</span><span class="skill-item">Angular</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3 class="skill-cat-title"><span class="cat-bracket">[</span>AI &amp; AUTOMATION<span class="cat-bracket">]</span></h3>
+        <div class="skill-items">
+          <span class="skill-item">Gemini Vision AI</span><span class="skill-item">OpenCV (WASM)</span>
+          <span class="skill-item">pHash / SSIM</span><span class="skill-item">Puppeteer</span>
+          <span class="skill-item">Apify API</span><span class="skill-item">Telegram Bot API</span>
+          <span class="skill-item">AI QA Benchmarks</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3 class="skill-cat-title"><span class="cat-bracket">[</span>TOOLS &amp; PLATFORMS<span class="cat-bracket">]</span></h3>
+        <div class="skill-items">
+          <span class="skill-item">SQLite</span><span class="skill-item">MySQL / PostgreSQL</span>
+          <span class="skill-item">Docker</span><span class="skill-item">Git</span>
+          <span class="skill-item">PM2 Process Manager</span><span class="skill-item">Linux VPS</span>
+          <span class="skill-item">Etherscan / Remix</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-certifications-wrap">
+      <div class="cert-header">
+        <h3 class="cert-title"><span class="cat-bracket">[</span>VERIFIED CREDENTIALS &amp; CERTIFICATIONS<span class="cat-bracket">]</span></h3>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-item">
+          <span class="cert-badge">BLOCKCHAIN</span>
+          <div class="cert-info">
+            <span class="cert-name">Ethereum and Solidity: The Complete Developer's Guide</span>
+            <span class="cert-issuer">Udemy &middot; ID: UC-4a214028-5231-4925-9ccd-c2c8dbf2322d</span>
+          </div>
+        </div>
+        <div class="cert-item">
+          <span class="cert-badge">SMART CONTRACTS</span>
+          <div class="cert-info">
+            <span class="cert-name">Blockchain Basics and Solidity Programming</span>
+            <span class="cert-issuer">Udemy &middot; ID: UC-3f966b0-ae60-4001-bb56-7462874a3000</span>
+          </div>
+        </div>
+        <div class="cert-item">
+          <span class="cert-badge">SECURITY</span>
+          <div class="cert-info">
+            <span class="cert-name">Blockchain Basics</span>
+            <span class="cert-issuer">Cyfrin Updraft</span>
+          </div>
+        </div>
+        <div class="cert-item">
+          <span class="cert-badge">WEB DESIGN</span>
+          <div class="cert-info">
+            <span class="cert-name">Responsive Web Design</span>
+            <span class="cert-issuer">freeCodeCamp &middot; ID: fcc23d3163d-c379-45d2-a5b9-3e89cfe79470-rwd</span>
+          </div>
+        </div>
+        <div class="cert-item">
+          <span class="cert-badge">BACKEND</span>
+          <div class="cert-info">
+            <span class="cert-name">Belajar Web Development Menggunakan Bahasa Pemrograman PHP</span>
+            <span class="cert-issuer">Udemy &middot; ID: UC-2ea7e8f8-1383-420d-9eaa-716c6e728d0b</span>
+          </div>
+        </div>
+        <div class="cert-item">
+          <span class="cert-badge">JAVASCRIPT</span>
+          <div class="cert-info">
+            <span class="cert-name">JavaScript Intermediate &amp; Web Fundamentals Suite (HTML, CSS, JS)</span>
+            <span class="cert-issuer">Sololearn Certified Developer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num" aria-hidden="true">03</div>
+      <div class="section-title-wrap">
+        <span class="section-tag">// OPERATION HISTORY</span>
+        <h2 class="section-title" data-splitting>MISSION LOG</h2>
+      </div>
+      <div class="section-line" aria-hidden="true"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-spine" aria-hidden="true"><div class="timeline-spine-fill"></div></div>
+
+      <article class="timeline-entry timeline-entry--right">
+        <div class="entry-connector" aria-hidden="true"><div class="connector-dot"></div></div>
+        <div class="entry-card">
+          <div class="entry-header">
+            <div class="entry-period">[MARCH 2024 &mdash; AUGUST 2026]</div>
+            <div class="entry-status entry-status--done">COMPLETED</div>
+          </div>
+          <h3 class="entry-role">Full-Stack Web Developer &amp; Investment Manager</h3>
+          <div class="entry-company">Dasendria CoSpace &middot; Bogor, ID</div>
+          <p class="entry-brief">
+            Oversaw full Software Development Life Cycle (SDLC) across all 3 client web projects simultaneously, including commercial and governmental web infrastructure (Kemenkop &amp; PPID). Balanced dual responsibilities of developing digital systems and managing capital allocation across Indonesian Stock &amp; Crypto markets with strict Technical/Fundamental Analysis and Risk Management protocols. Integrated custom PHP/MySQL modules and WhatsApp API endpoints.
+          </p>
+          <div class="entry-tech">
+            <span class="tech-tag">Full-Stack SDLC</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">WhatsApp API</span>
+            <span class="tech-tag">Stock &amp; Crypto Markets</span>
+            <span class="tech-tag">Risk Management</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="timeline-entry timeline-entry--left">
+        <div class="entry-connector" aria-hidden="true"><div class="connector-dot"></div></div>
+        <div class="entry-card">
+          <div class="entry-header">
+            <div class="entry-period">[MARCH 2025 &mdash; NOVEMBER 2025]</div>
+            <div class="entry-status entry-status--done">COMPLETED</div>
+          </div>
+          <h3 class="entry-role">AI Quality Assurance (QA) Specialist</h3>
+          <div class="entry-company">Outlier &middot; Remote</div>
+          <p class="entry-brief">
+            Audited and refined 4 to 5 AI projects per month across code generation, text, image, and video output modalities. Evaluated outputs against strict accuracy, security, and logical reasoning benchmarks. Applied rigorous instruction-following metrics to audit model responses, directly improving training data quality for LLM alignment.
+          </p>
+          <div class="entry-tech">
+            <span class="tech-tag">AI Code QA</span>
+            <span class="tech-tag">LLM Alignment</span>
+            <span class="tech-tag">Prompt Auditing</span>
+            <span class="tech-tag">Logical Reasoning</span>
+            <span class="tech-tag">Multimodal AI</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="timeline-entry timeline-entry--right">
+        <div class="entry-connector" aria-hidden="true"><div class="connector-dot"></div></div>
+        <div class="entry-card">
+          <div class="entry-header">
+            <div class="entry-period">[JULY 2022 &mdash; JULY 2023]</div>
+            <div class="entry-status entry-status--done">COMPLETED</div>
+          </div>
+          <h3 class="entry-role">Sales &amp; Marketing Representative</h3>
+          <div class="entry-company">Jantaka Reload &middot; Indonesia</div>
+          <p class="entry-brief">
+            Demonstrated persuasive communication and relationship-building skills to promote digital products, consistently exceeding monthly sales targets in a highly competitive market. Built and maintained loyal client relationships through proactive follow-up and structured communication.
+          </p>
+          <div class="entry-tech">
+            <span class="tech-tag">Client Relations</span>
+            <span class="tech-tag">Sales Strategy</span>
+            <span class="tech-tag">Communication</span>
+            <span class="tech-tag">Digital Products</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="timeline-entry timeline-entry--left">
+        <div class="entry-connector" aria-hidden="true"><div class="connector-dot"></div></div>
+        <div class="entry-card">
+          <div class="entry-header">
+            <div class="entry-period">[2022 &mdash; 2026]</div>
+            <div class="entry-status entry-status--active"><span class="status-pulse" aria-hidden="true"></span> CANDIDATE</div>
+          </div>
+          <h3 class="entry-role">Bachelor of Informatics Engineering (S.Kom)</h3>
+          <div class="entry-company">Pamulang University &middot; Indonesia</div>
+          <p class="entry-brief">
+            Undergraduate degree in Informatics Engineering focusing on full-stack software engineering, blockchain architecture, and automated AI systems. Author of undergraduate thesis research: <em>Blockchain Specialty Coffee Supply Chain Tracking System (Ethereum + MySQL Dual-Layer)</em>.
+          </p>
+          <div class="entry-tech">
+            <span class="tech-tag">Informatics Engineering</span>
+            <span class="tech-tag">Software Architecture</span>
+            <span class="tech-tag">Blockchain Research</span>
+            <span class="tech-tag">Database Systems</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num" aria-hidden="true">04</div>
+      <div class="section-title-wrap">
+        <span class="section-tag">// DEPLOYED SYSTEMS</span>
+        <h2 class="section-title" data-splitting>ASSETS</h2>
+      </div>
+      <div class="section-line" aria-hidden="true"></div>
+    </div>
+    <div class="projects-grid">
+
+      <article class="project-tile project-tile--featured" data-tilt>
+        <div class="project-bg" style="--bg-hue:150deg"></div>
+        <div class="project-content">
+          <div class="project-meta">
+            <span class="project-num">001 // AI VISION &amp; AUTOMATION</span>
+          </div>
+          <h3 class="project-title">HMZ Auto AI v2 – Automated Crypto Chart Scraper &amp; AI Pipeline</h3>
+          <p class="project-desc">
+            Production-grade 24/7 automated system for scraping crypto technical analysis charts from targeted Twitter/X accounts, classifying them via AI vision (Gemini 2.5 Flash-Lite), and delivering curated real-time results to Telegram subscribers. Engineered with perceptual hashing (pHash) &amp; Aligned-SSIM deduplication, OpenCV WASM, and startup self-test watchdog timers.
+          </p>
+          <div class="project-tech-list">
+            <span>Node.js</span><span>SQLite</span><span>Gemini 2.5 Flash-Lite</span><span>OpenCV WASM</span>
+            <span>Apify API</span><span>Telegram Bot API</span><span>PM2</span><span>Puppeteer</span><span>pHash / SSIM</span>
+          </div>
+          <div class="project-links"><a href="#contact" class="project-link" data-magnetic>SYSTEM INQUIRY &#x2192;</a></div>
+        </div>
+      </article>
+
+      <article class="project-tile" data-tilt>
+        <div class="project-bg" style="--bg-hue:210deg"></div>
+        <div class="project-content">
+          <div class="project-meta"><span class="project-num">002 // BLOCKCHAIN THESIS</span></div>
+          <h3 class="project-title">Blockchain Specialty Coffee Supply Chain Tracking System</h3>
+          <p class="project-desc">
+            Web-based decentralized supply chain data integrity platform using a MySQL + Ethereum dual-layer architecture. Developed as undergraduate thesis research using prototyping methodology (Case Study: Gayo Specialty Coffee).
+          </p>
+          <div class="project-tech-list">
+            <span>Solidity</span><span>Smart Contracts</span><span>Ethereum</span><span>ethers.js</span>
+            <span>Express.js</span><span>MySQL</span><span>JWT / bcrypt</span><span>QR Code</span>
+          </div>
+          <div class="project-links"><a href="#contact" class="project-link" data-magnetic>RESEARCH &amp; CODEBASE &#x2192;</a></div>
+        </div>
+      </article>
+
+      <article class="project-tile" data-tilt>
+        <div class="project-bg" style="--bg-hue:30deg"></div>
+        <div class="project-content">
+          <div class="project-meta"><span class="project-num">003 // ENTERPRISE INFRA</span></div>
+          <h3 class="project-title">Web Infrastructure &amp; Content Management (Kemenkop &amp; PPID)</h3>
+          <p class="project-desc">
+            Governmental web portal and information management system developed under Dasendria CoSpace for Ministry of Cooperatives (Kemenkop) and PPID public information portals with custom communication endpoints.
+          </p>
+          <div class="project-tech-list">
+            <span>PHP</span><span>MySQL</span><span>JavaScript</span><span>WhatsApp API</span><span>REST API</span>
+          </div>
+          <div class="project-links"><a href="#contact" class="project-link" data-magnetic>PROJECT DETAILS &#x2192;</a></div>
+        </div>
+      </article>
+
+      <article class="project-tile" data-tilt>
+        <div class="project-bg" style="--bg-hue:60deg"></div>
+        <div class="project-content">
+          <div class="project-meta"><span class="project-num">004 // PRODUCTION WEB</span></div>
+          <h3 class="project-title">Build Frontend Mulia Promosindo</h3>
+          <p class="project-desc">
+            Commercial enterprise web frontend developed for PT Mulia Promosindo, delivering a responsive corporate showcase for promotional merchandise and business branding.
+          </p>
+          <div class="project-tech-list">
+            <span>HTML5</span><span>CSS3</span><span>Bootstrap</span><span>PHP</span><span>Responsive UI</span>
+          </div>
+          <div class="project-links"><a href="https://muliapromosindo.co.id/" target="_blank" rel="noopener noreferrer" class="project-link" data-magnetic>VISIT LIVE SITE &#x2192;</a></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num" aria-hidden="true">05</div>
+      <div class="section-title-wrap">
+        <span class="section-tag">// SECURE CHANNEL</span>
+        <h2 class="section-title" data-splitting>CONNECT</h2>
+      </div>
+      <div class="section-line" aria-hidden="true"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-terminal">
+          <p class="ct-line"><span class="ct-prompt">&gt;</span> INITIALIZING SECURE CHANNEL...</p>
+          <p class="ct-line ct-delay-1"><span class="ct-prompt">&gt;</span> PROTOCOL: AES-256-GCM ACTIVE</p>
+          <p class="ct-line ct-delay-2"><span class="ct-prompt">&gt;</span> STATUS: <span class="ct-green">READY TO RECEIVE</span></p>
+        </div>
+        <p class="contact-desc">Tertarik berkolaborasi? Punya proyek menarik? Atau ingin berdiskusi tentang AI, smart contracts, atau trading strategies? Channel terbuka &mdash; respons dalam 24 jam.</p>
+        <address class="contact-channels">
+          <a href="mailto:zaydan281003@gmail.com" class="channel-link" data-magnetic>
+            <span class="channel-icon">&#x2709;</span>
+            <span class="channel-label">EMAIL</span>
+            <span class="channel-val">zaydan281003@gmail.com</span>
+            <span class="channel-arrow" aria-hidden="true">&#x2192;</span>
+          </a>
+          <a href="https://wa.me/6281380994278" target="_blank" rel="noopener noreferrer" class="channel-link" data-magnetic>
+            <span class="channel-icon">&#x260E;</span>
+            <span class="channel-label">WHATSAPP</span>
+            <span class="channel-val">+62 813-8099-4278</span>
+            <span class="channel-arrow" aria-hidden="true">&#x2192;</span>
+          </a>
+          <a href="https://www.linkedin.com/in/haekal-mimtazulfaqhi-zaydan-08001a272/" target="_blank" rel="noopener noreferrer" class="channel-link" data-magnetic>
+            <span class="channel-icon">&#x25C8;</span>
+            <span class="channel-label">LINKEDIN</span>
+            <span class="channel-val">haekal-mimtazulfaqhi-zaydan</span>
+            <span class="channel-arrow" aria-hidden="true">&#x2192;</span>
+          </a>
+          <div class="channel-link">
+            <span class="channel-icon">&#x25C9;</span>
+            <span class="channel-label">LOCATION</span>
+            <span class="channel-val">Depok, West Java, ID</span>
+            <span class="channel-arrow" aria-hidden="true">&bull;</span>
+          </div>
+        </address>
+      </div>
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="form-name">IDENTIFIER</label>
+          <div class="form-input-wrap">
+            <input type="text" id="form-name" name="name" class="form-input" placeholder="Your name or alias" autocomplete="name" required>
+            <div class="input-line" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="form-email">RETURN ADDRESS</label>
+          <div class="form-input-wrap">
+            <input type="email" id="form-email" name="email" class="form-input" placeholder="your@email.com" autocomplete="email" required>
+            <div class="input-line" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="form-subject">SIGNAL TYPE</label>
+          <div class="form-input-wrap">
+            <select id="form-subject" name="subject" class="form-input form-select">
+              <option value="">SELECT PURPOSE</option>
+              <option value="project">Project Collaboration</option>
+              <option value="freelance">Freelance Work</option>
+              <option value="ai">AI Automation</option>
+              <option value="blockchain">Smart Contract / Blockchain</option>
+              <option value="trading">Trading / Investment</option>
+              <option value="other">Other</option>
+            </select>
+            <div class="input-line" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="form-message">TRANSMISSION</label>
+          <div class="form-input-wrap">
+            <textarea id="form-message" name="message" class="form-input form-textarea" placeholder="Your message..." rows="5" required></textarea>
+            <div class="input-line" aria-hidden="true"></div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full" data-magnetic>
+          <span class="btn-text">TRANSMIT MESSAGE</span>
+          <span class="btn-icon" aria-hidden="true">&#x27F6;</span>
+          <div class="btn-loader" aria-hidden="true"></div>
+        </button>
+        <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <span class="footer-logo">HMZ</span>
+      <span class="footer-sep" aria-hidden="true">&middot;</span>
+      <span class="footer-copy">&copy; HAEKAL MIMTAZULFAQHI ZAYDAN</span>
+    </div>
+    <div class="footer-right" aria-hidden="true">
+      <span id="footer-time" class="footer-clock"></span>
+      <span class="footer-sep">&middot;</span>
+      <span class="footer-metric">CPU: <span id="footer-cpu">3.2%</span></span>
+      <span class="footer-sep">&middot;</span>
+      <span class="footer-metric">MEM: <span id="footer-mem">142MB</span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+
+<script src="js/noise.js"></script>
+<script src="js/counter.js"></script>
+<script src="js/glitch.js"></script>
+<script src="js/cursor.js"></script>
+<script src="js/three-scene.js"></script>
+<script src="js/skills-network.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

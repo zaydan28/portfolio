@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 340" width="300" height="340">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00FF88" stroke-width="0.25" opacity="0.25"/>
+    </pattern>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00FF88" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0A0A0F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A1A2E"/>
+      <stop offset="100%" stop-color="#0A0A0F"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="340" fill="url(#bg)"/>
+  <rect width="300" height="340" fill="url(#grid)"/>
+  <rect width="300" height="340" fill="url(#glow)"/>
+  <rect width="300" height="1" y="170" fill="#00FF88" opacity="0.05"/>
+  <!-- TL bracket -->
+  <polyline points="12,32 12,12 32,12" fill="none" stroke="#00FF88" stroke-width="1.5" opacity="0.8"/>
+  <!-- TR bracket -->
+  <polyline points="268,12 288,12 288,32" fill="none" stroke="#00FF88" stroke-width="1.5" opacity="0.8"/>
+  <!-- BL bracket -->
+  <polyline points="12,308 12,328 32,328" fill="none" stroke="#00FF88" stroke-width="1.5" opacity="0.8"/>
+  <!-- BR bracket -->
+  <polyline points="268,328 288,328 288,308" fill="none" stroke="#00FF88" stroke-width="1.5" opacity="0.8"/>
+  <!-- Avatar circle -->
+  <circle cx="150" cy="130" r="52" fill="#1A1A2E" stroke="#00FF88" stroke-width="1" stroke-dasharray="4 4" opacity="0.4"/>
+  <circle cx="150" cy="115" r="26" fill="#00FF88" opacity="0.07"/>
+  <path d="M 104 200 Q 108 160 150 158 Q 192 160 196 200" fill="#00FF88" opacity="0.06"/>
+  <!-- Initials -->
+  <text x="150" y="148" text-anchor="middle" dominant-baseline="middle" font-family="Courier New,monospace" font-size="30" font-weight="700" letter-spacing="8" fill="#00FF88" opacity="0.9">HMZ</text>
+  <!-- Divider -->
+  <line x1="60" y1="176" x2="240" y2="176" stroke="#00FF88" stroke-width="0.5" opacity="0.25"/>
+  <!-- Instruction -->
+  <text x="150" y="202" text-anchor="middle" font-family="Courier New,monospace" font-size="9" fill="#555566" letter-spacing="3">[ REPLACE WITH PHOTO ]</text>
+  <text x="150" y="224" text-anchor="middle" font-family="Courier New,monospace" font-size="7.5" fill="#333344" letter-spacing="1">img src="assets/your-photo.jpg"</text>
+  <!-- Status -->
+  <circle cx="140" cy="300" r="3" fill="#00FF88" opacity="0.7"/>
+  <circle cx="150" cy="300" r="3" fill="#333344" opacity="0.5"/>
+  <circle cx="160" cy="300" r="3" fill="#333344" opacity="0.5"/>
+  <text x="150" y="320" text-anchor="middle" font-family="Courier New,monospace" font-size="7.5" fill="#333344" letter-spacing="2">ID: HMZ | DEPOK, ID</text>
+</svg>
