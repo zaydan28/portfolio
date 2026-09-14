@@ -49,6 +49,8 @@ class SkillsNetwork {
       { name:'Laravel',       cat:'backend',    level:85, r:18 },
       { name:'SQLite / MySQL',cat:'backend',    level:92, r:21 },
       // AI & Vision Automation — cluster center ~(0.78, 0.32)
+      { name:'n8n Workflow',  cat:'ai',         level:94, r:21 },
+      { name:'Claude Sonnet', cat:'ai',         level:95, r:22 },
       { name:'Gemini Vision AI',cat:'ai',       level:95, r:22 },
       { name:'OpenCV (WASM)', cat:'ai',         level:88, r:19 },
       { name:'pHash / SSIM',  cat:'ai',         level:90, r:20 },
