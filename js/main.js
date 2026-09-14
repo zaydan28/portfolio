@@ -184,10 +184,8 @@ const App = (() => {
       if (roleEl) {
         new RoleTypewriter(roleEl, [
           'FULLSTACK DEV',
-          'AI AUTOMATION',
-          'SMART CONTRACT ENGINEER',
-          'CRYPTO TRADER',
-          'INVESTMENT MANAGER',
+          'AI ENGINEER',
+          'WEB3',
         ]);
       }
 
@@ -280,7 +278,7 @@ const App = (() => {
         `  <span class="t-key">"location"</span>: <span class="t-str">"Depok, West Java, Indonesia"</span>,`,
         `  <span class="t-key">"email"</span>: <span class="t-str">"zaydan281003@gmail.com"</span>,`,
         `  <span class="t-key">"phone"</span>: <span class="t-str">"+62 813-8099-4278"</span>,`,
-        `  <span class="t-key">"roles"</span>: [<span class="t-str">"FULLSTACK DEV","AI AUTOMATION","SMART CONTRACT ENGINEER","CRYPTO TRADER","INVESTMENT MANAGER"</span>],`,
+        `  <span class="t-key">"roles"</span>: [<span class="t-str">"FULLSTACK DEV","AI ENGINEER","WEB3"</span>],`,
         `  <span class="t-key">"core_stack"</span>: [<span class="t-str">"FastAPI"</span>,<span class="t-str">"Python"</span>,<span class="t-str">"Node.js"</span>,<span class="t-str">"React"</span>,<span class="t-str">"Solidity"</span>,<span class="t-str">"n8n"</span>,<span class="t-str">"Ethers.js"</span>],`,
         `  <span class="t-key">"status"</span>: <span class="t-green">"ACTIVE"</span>,`,
         `  <span class="t-key">"clearance"</span>: <span class="t-amber">"LEVEL_5"</span>`,
