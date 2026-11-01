@@ -274,7 +274,7 @@ const App = (() => {
         '{',
         `  <span class="t-key">"name"</span>: <span class="t-str">"Haekal Mimtazulfaqhi Zaydan"</span>,`,
         `  <span class="t-key">"alias"</span>: <span class="t-str">"HMZ"</span>,`,
-        `  <span class="t-key">"education"</span>: <span class="t-str">"B.Eng Informatics (S.Kom), Pamulang Univ"</span>,`,
+        `  <span class="t-key">"education"</span>: <span class="t-str">"B.Eng Computer Science (S.Kom), Pamulang Univ"</span>,`,
         `  <span class="t-key">"location"</span>: <span class="t-str">"Depok, West Java, Indonesia"</span>,`,
         `  <span class="t-key">"email"</span>: <span class="t-str">"zaydan281003@gmail.com"</span>,`,
         `  <span class="t-key">"phone"</span>: <span class="t-str">"+62 813-8099-4278"</span>,`,
